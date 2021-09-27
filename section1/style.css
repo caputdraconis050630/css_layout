@@ -1,0 +1,31 @@
+.father {
+    /* flex continer */
+    display: flex; 
+
+    /* main axis alignment */
+    justify-content: space-around;
+
+    /* cross axis alignment */
+    /* align-items: center; */
+
+    /* To use align-items, we have to give height to flex container */
+    height: 100vh; 
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    background-color: peru;
+    color: white;
+    font-size: 50px;;
+}
+
+/* give align-items: center only to 2nd .child */
+.child:nth-child(2){
+    align-items: center;
+}
+
+/* default order value is 0. So when we give order property bigger than 0, it will be place at last. */
+.child:nth-child(1){
+    order : 1;
+}
