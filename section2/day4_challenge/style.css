@@ -1,100 +1,64 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
 body {
-  background-color:#DDE1D4;
   padding:15px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Itim', cursive;
   width: 100%;
   height: 100vh;
   margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(4, 1fr);
+}
+
+div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+}
+
+div:first-child,
+div:nth-child(2),
+div:nth-child(3) {
+  grid-column:span 2;
+  grid-row:span 2;
+  font-size:48px;
 }
 
 
-.grid {
-    display: grid;
-    grid-template-rows: repeat(4, 25vh);
-    grid-template-columns : repeat(4, 25%);
-
-    grid-template-areas: 
-    "white white green green"
-    "white white green green"
-    "orange orange pink purple"
-    "orange orange yellow pink2"
-    ;
-
-    font-size: 8vh;
-    font-family: Cantarell;
+div:first-child {
+background-color:#DAE7DE;
+color:#F4440A;
 }
 
-.white {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DAE7DE;
-    color: #F2450B;
-    grid-area: white;
+div:nth-child(2){
+background-color:#008A69;
+color:#FDFDFD;
 }
 
-.green  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #228969;
-    color: white;
-    grid-area: green;
+div:nth-child(3){
+background-color:#F44607;
+color:#FDFDFD;
 }
 
-.orange {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2450B;
-    color: white;
-    grid-area: orange;
+div:nth-child(4){
+  background-color:#F7ABC4;
+  color:#F4440A;
 }
 
-
-
-.pink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F7ABC5;
-    color: #F2450B;
-    grid-area: pink;
-
-    font-size: 4vh;
+div:nth-child(5){
+  background-color:#5F5FA9;
+  color:#FDFDFD;
 }
 
-.purple {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5F5FA9;
-    color: white;
-    grid-area: purple;
-
-    font-size: 4vh;
+div:nth-child(6){
+  background-color:#FFC128;
+  color:#F4440A;
 }
 
-.yellow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FEC127;
-    color: #F2450B;
-    grid-area: yellow;
-
-    font-size: 4vh;
-}
-
-.pink2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F97373;
-    color: white;
-    grid-area: pink2;
-
-    font-size: 4vh;
+div:nth-child(7){
+  background-color:#F97374;
+  color:#FDFDFD;
 }
